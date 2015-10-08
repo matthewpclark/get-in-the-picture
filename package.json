@@ -1,13 +1,17 @@
 {
-  "name": "bootstrap-test",
+  "name": "get-in-the-picture",
   "version": "0.0.1",
   "description": "A test of the Bootstrap Library",
   "main": "index.js",
   "scripts": {
-    "test": "prove"
+    "test": "grunt"
   },
-  "author": "Sam Gillespie",
+  "author": "Matt Clark and Sam Gillespie",
   "license": "ISC",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/matthewpclark/get-in-the-picture.git"
+  },
   "dependencies": {
     "bootstrap": "^3.3.5"
   },

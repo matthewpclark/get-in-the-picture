@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         },
         files: {
           "build/css/test.css": "src/less/test.less",
-          "build/css/jumbotron.css": "node_modules/bootstrap/less/jumbotron.less",
+          //"build/css/jumbotron.css": "node_modules/bootstrap/less/jumbotron.less",
         }
       },
     },
