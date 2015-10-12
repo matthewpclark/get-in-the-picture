@@ -1,5 +1,8 @@
 //Main less file
 
+//bring in our bootstrap less file
+@import '../../node_modules/bootstrap/less/bootstrap';
+
 //colours:
   //Greens:
   @green-dark:    #89C439;
@@ -19,8 +22,22 @@
   @orange-light:  #FDB833;
 
   //Tones:
-  @grey:          #989898;
+  @gray:          #989898;
 
   @cream-darkest: #FCE9D2; //16574930
   @cream-darker:  #FCDEDC; //16572124
   @cream-light:   #E9F2D9;
+
+//bootstrap variables:
+
+  //typography:
+  @font-size-base:          14px;
+  @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+  @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+  @font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+  @font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+  @font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+  @font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+  @font-size-h5:            @font-size-base;
+  @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px

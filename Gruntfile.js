@@ -21,12 +21,25 @@ module.exports = function(grunt) {
           paths: ['build/css'],
         },
         files: {
-          "build/css/test.css": "src/less/test.less",
+          "build/css/main.css": "src/less/*.less",
           //"build/css/jumbotron.css": "node_modules/bootstrap/less/jumbotron.less",
         }
       },
     },
 
+  //   //build and lint our less
+  //   recess: {
+  //       build: {
+  //         options: {
+  //           compile: true
+  //         },
+  //         files: {
+  //           'build/css/main.css': 'build-stage0/less/*.less',
+  //           'build/css/bootstrap.min.css': 'build-stage0/less/bootstrap/*.less',
+  //         },
+  //       },
+  //   },
+  //
     //Lint our source code
     jshint: {
       all: ['Gruntfile.js', 'src/**/*.js']
@@ -52,13 +65,20 @@ module.exports = function(grunt) {
         dest: 'build/'
       },
 
-      //move in our bootstrap
-      bootstrapMin: {
+      assets: {
         expand: true,
-        cwd: 'node_modules/bootstrap/dist/',
-        src: ['js/*.min.js', 'css/*.min.css', 'fonts/*'],
-        dest: 'build/'
+        cwd: 'src/assets',
+        src: '**',
+        dest: 'build/assets',
       },
+
+      // //move in our bootstrap
+      // bootstrapMin: {
+      //   expand: true,
+      //   cwd: 'node_modules/bootstrap/dist/',
+      //   src: ['js/*.min.js', 'fonts/*'],
+      //   dest: 'build/'
+      // },
     },
   });
 
