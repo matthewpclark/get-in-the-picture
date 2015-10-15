@@ -1,7 +1,19 @@
 
 @import 'top-banner';
 @import 'mixins/carousel';
+@import "mixins/svg-background";
+//@import (reference) "../../node_modules/bootstrap/less/bootstrap";
 
+@carousel-size: 600px;
 .homepage-carousel {
-  .jcarousel;
+  .jcarousel(100%, @carousel-size * 0.9);
+}
+
+.homepage-carousel-container {
+  .svg-background('../assets/img/bg-texture-hexagons-lg-pastel.svg', '../assets/img/bg-texture-hexagons-lg-pastel.png');
+  //background-repeat: repeat-x;
+  height: @carousel-size;
+  background-size: @carousel-size * 0.6;
+  background-position: center;
+  overflow: hidden;
 }
