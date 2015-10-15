@@ -73,12 +73,20 @@ module.exports = function(grunt) {
       },
 
       // //move in our bootstrap
-      // bootstrapMin: {
-      //   expand: true,
-      //   cwd: 'node_modules/bootstrap/dist/',
-      //   src: ['js/*.min.js', 'fonts/*'],
-      //   dest: 'build/'
-      // },
+      bootstrapMin: {
+        expand: true,
+        cwd: 'node_modules/bootstrap/dist/',
+        src: ['js/*.min.js', 'fonts/*'],
+        dest: 'build/'
+      },
+
+      //move in jcarousel
+      jcarouselMin: {
+        expand: true,
+        cwd: 'node_modules/jcarousel/dist/',
+        src: 'jquery.jcarousel.min.js',
+        dest: 'build/js/',
+      }
     },
   });
 
