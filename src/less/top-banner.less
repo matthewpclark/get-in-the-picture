@@ -2,16 +2,19 @@
 @import "colours";
 @import (reference) "../../node_modules/bootstrap/less/bootstrap";
 
-@banner-height: 100px;
+@banner-height: 150px;
 
 .top-banner {
   .jumbotron;
   background-color: transparent;
+  margin: 0;
+  border: 0;
+  padding: 0 !important;
 }
 
 .top-banner-text {
   text-align: right;
-  margin-top: @banner-height / 20;
+  //margin-top: @banner-height / 20;
 }
 
 .top-banner-logo {
@@ -20,5 +23,6 @@
   background-size: contain;
   background-position: left center;
   height: @banner-height;
-  margin-top: @banner-height / 10;
+  //margin-top: @banner-height / 10;
+  //margin-bottom: @banner-height / 10;
 }
