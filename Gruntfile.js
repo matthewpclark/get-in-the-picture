@@ -21,7 +21,7 @@ module.exports = function(grunt) {
           paths: ['build/css'],
         },
         files: {
-          "build/css/main.css": "src/less/*.less",
+          "build/css/main.css": "src/less/main.less",
           //"build/css/jumbotron.css": "node_modules/bootstrap/less/jumbotron.less",
         }
       },
