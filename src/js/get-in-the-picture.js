@@ -4,7 +4,7 @@
 (function($) {
     $(function() {
         $('.homepage-carousel').jcarousel({
-          lists: '/jcarousel-list',
+          lists: '.jcarousel-list',
           items: '.jcarousel-item',
           wrap: "circular",
         });

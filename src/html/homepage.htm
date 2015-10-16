@@ -12,6 +12,11 @@
 
     <title>Get In the Picture</title>
 
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+
     <!-- our Main css built from our less files incorporating bootstrap.less-->
     <link href="css/main.css" rel="stylesheet">
 
@@ -30,21 +35,29 @@
     <nav class="navbar-search navbar">
       <div class="container-fluid">
 
+
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false" aria-controls="navbar">
+          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle Search</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
+          </button> -->
+          <form class="navbar-form navbar-toggle nav-bar-min" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control input-sm" placeholder="Search">
+            </div>
+            <!-- <button type="submit" class="btn-xs btn-default">Submit</button> -->
+          </form>
         </div>
+
 
         <div id="navbar-search" class="navbar-header navbar-collapse collapse navbar-right">
           <form class="navbar-form " role="search">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control input-sm" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn-xs btn-default">Submit</button>
           </form>
         </div>
       </div>
@@ -109,35 +122,39 @@
     </nav>
 
     <!-- Our very own carousel! -->
-    <div class="homepage-carousel-container">
-      <div class="homepage-carousel">
-        <div class="container jcarousel-list">
-          <div class="row jcarousel-item">
+    <div class="container">
+      <div class="homepage-carousel-container">
+        <div class="homepage-carousel">
+          <ul class="jcarousel-list">
+
+            <li class="row jcarousel-item">
+              <div class="col-md-6">
+                Picture
+              </div>
+              <div class="col-md-6">
+                text
+              </div>
+            </row>
+          </li>
+
+          <li class="row jcarousel-item">
             <div class="col-md-6">
-              Picture
+              Another Picture
             </div>
             <div class="col-md-6">
-              text
+              Some other text
             </div>
-          </row>
-        </div>
-        <div class="row jcarousel-item">
-          <div class="col-md-6">
-            Another Picture
-          </div>
-          <div class="col-md-6">
-            Some other text
-          </div>
-        </div>
+          </li>
+
+        </ul>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p class="jcarousel-pagination">
 
-          </p>
-        </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="jcarousel-pagination">
+
+        </p>
       </div>
     </div>
   </div>
@@ -147,119 +164,164 @@
     <div class="row">
 
       <!-- example news item -->
-      <div class="news-summary col-lg-3">
-        <div class="item-body">
-          <h2 class="item-header">news</h2>
-          <p>
-            Image goes here
-          </p>
-          <div class="item-text">
-            <h4>Title of a news article</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="blog-summary col-lg-3">
-        <div class="item-body">
-          <h2 class="item-header">blog article</h2>
-          <div class="item-text">
-
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-xs-6">
-                  <p class="item-bordered-content">
-                    Image goes here
-                  </p>
-                  <b>Authors Name</b>
-                </div>
-                <div class="col-xs-6">
-                  <h4>Title of a blog article</h4>
-                  <p>
-                    blog text goes here!
-                  </p>
-                </div>
+        <div class="news-summary col-lg-3">
+          <a href="#">
+            <div class="item-body nav">
+              <h2 class="item-header">news</h2>
+              <p>
+                Image goes here
+              </p>
+              <div class="item-text">
+                <b>Title of a news article</b>
               </div>
             </div>
-
-          </div>
+          </a>
         </div>
+
+      <div class="blog-summary col-lg-3">
+        <a href="#">
+          <div class="item-body">
+            <h2 class="item-header">blog article</h2>
+            <div class="item-text">
+
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <p class="item-bordered-content">
+                      Image goes here
+                    </p>
+                    <b>Authors Name</b>
+                  </div>
+                  <div class="col-xs-6">
+                    <b>Title of a blog article</b>
+                    <p>
+                      blog text goes here!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </a>
       </div>
 
       <div class="publication-summary col-lg-3">
-        <div class="item-body">
-          <h2 class="item-header">publication</h2>
-          <div class="item-text">
+        <a href="#">
+          <div class="item-body">
+            <h2 class="item-header">publication</h2>
+            <div class="item-text">
 
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4>Title of publication</h4>
-                  <p>
-                    blog text goes here!
-                  </p>
-                </div>
-                <div class="col-xs-6">
-                  <p>
-                    Image goes here
-                  </p>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <b>Title of publication</b>
+                    <p>
+                      blog text goes here!
+                    </p>
+                  </div>
+                  <div class="col-xs-6">
+                    <p>
+                      Image goes here
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="event-summary col-lg-3">
-        <div class="item-body">
-          <h2 class="item-header">event</h2>
-          <div class="item-text">
+        <a href="#">
+          <div class="item-body">
+            <h2 class="item-header">event</h2>
+            <div class="item-text">
 
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-xs-6">
-                  <div class="event-date-border">
-                    <h5 class="event-date-month-name">month</h5>
-                    <h2 class="event-date-day-digits"><b>20</b></h2>
-                    <h5 class="event-date-year-digits">2015</h5>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="event-date-border">
+                      <h5 class="event-date-month-name">month</h5>
+                      <h2 class="event-date-day-digits"><b>20</b></h2>
+                      <h5 class="event-date-year-digits">2015</h5>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <b>Title of the event</b>
+                    <p>
+                      Title descrtption goes here!
+                    </p>
                   </div>
                 </div>
-                <div class="col-xs-6">
-                  <h4>Title of a event</h4>
-                  <p>
-                    Title descrtption goes here!
-                  </p>
-                </div>
               </div>
-            </div>
 
+            </div>
           </div>
-        </div>
+        </a>
       </div>
 
     </div>
   </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
+  <!-- Title banner -->
+  <div class="goals-banner">
+    <div class="container-fluid">
+
       <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+
+        <div class="col-md-12">
+          <h1>
+            Goals
+          </h1>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+          Very brief text (about 100 words) to explain the nature and purpose of the CRVS Decade goals and to entice users to explore the goals in more detail.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus fringilla sem id interdum. Integer tristique aliquet justo vel tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Cras dapibus fringilla sem id interdum. Integer tristique aliquet justo vel tempus.
+          </p>
         </div>
       </div>
 
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="graphic-civ-reg">
+            <!--filled in from CSS -->
+          </div>
+          <h3 class="text-civ-reg">
+            Civil Registration
+          </h3>
+        </div>
+
+        <div class="col-md-4">
+          <div class="graphic-legal-docs">
+            <!--filled in from CSS -->
+          </div>
+          <h3 class="text-legal-docs">
+            Legal Documents
+          </h3>
+        </div>
+
+        <div class="col-md-4">
+          <div class="graphic-vital-stats">
+            <!--filled in from CSS -->
+          </div>
+          <h3 class="text-vital-stats">
+            Vital Statistics
+          </h3>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
       <hr>
 
       <footer>

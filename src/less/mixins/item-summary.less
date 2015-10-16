@@ -1,8 +1,11 @@
 //@import (reference) "../../../node_modules/bootstrap/less/grid";
 @import "../colours";
 @import "bordered";
+@import "disable-a-formating";
 
 .item-summary(@color, @darker-color) {
+
+  .disable-a-formating(black);
 
   .item-body {
     background-color: @gray-light;
@@ -10,6 +13,7 @@
     height: 300px;
     border-bottom: 5px solid @gray-light;
     border-radius: 10px;
+    .disable-a-formating(black);
   }
 
   .item-header {
@@ -17,15 +21,18 @@
     border-top: 10px solid @darker-color;
     margin-top: 0;
     padding: 5px;
+    .disable-a-formating(black);
   }
 
   .item-text {
     margin: 10px;
     overflow: hidden;
+    .disable-a-formating(black);
   }
 
   .item-bordered-content{
-    .item-bordered-content-config(@darker-color)
+    .item-bordered-content-config(@darker-color);
+    .disable-a-formating(black);
   }
 
 }

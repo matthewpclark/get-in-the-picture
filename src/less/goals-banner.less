@@ -1,0 +1,49 @@
+@import "mixins/svg-background";
+@import "colours";
+@import (reference) "../../node_modules/bootstrap/less/bootstrap";
+
+.goals-banner {
+  .jumbotron;
+  text-align: center;
+  border-top: 1px solid @green-dark;
+
+  //text
+  .text-civ-reg {
+    .goals-text(@blue-darker);
+  }
+
+  .text-legal-docs {
+    .goals-text(@red);
+  }
+
+  .text-vital-stats {
+    .goals-text(@green-dark);
+  }
+
+  //graphics
+  @graphic_size: 125px;
+  .graphic-civ-reg {
+    .goal-graphic('../assets/img/icon-goals-civil-registration.svg', @graphic_size);
+  }
+
+  .graphic-legal-docs {
+    .goal-graphic('../assets/img/icon-goals-legal-documents.svg', @graphic_size);
+  }
+
+  .graphic-vital-stats {
+    .goal-graphic('../assets/img/icon-goals-vital-statistics.svg', @graphic_size);
+  }
+}
+
+.goals-text(@color) {
+  color: @color;
+
+}
+
+.goal-graphic(@graphic_main, @graphic_size, @graphic_alt: '') {
+  .svg-background(@graphic_main, @graphic_alt);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: @graphic_size;
+}

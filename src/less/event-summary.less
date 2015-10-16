@@ -1,5 +1,6 @@
 @import "colours";
 @import "mixins/item-summary";
+@import "mixins/disable-a-formating";
 
 .event-summary {
   .item-summary(@cream-darker, @red);
@@ -8,17 +9,17 @@
 @text-margin: 5px;
 .event-date-month-name {
   margin: @text-margin;
-  color: @red;
+  .disable-a-formating(@red);
 }
 
 .event-date-day-digits {
   margin: @text-margin;
-  color: @red;
+  .disable-a-formating(@red);
 }
 
 .event-date-year-digits {
   margin: @text-margin;
-  color: @gray;
+  .disable-a-formating(@gray);
 }
 
 .event-date-border {

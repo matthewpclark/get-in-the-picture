@@ -1,0 +1,20 @@
+.disable-a-formating(@color) {
+  //overide behaviour inherited from a objects
+  color: @color;
+  text-decoration: none;
+
+  :link {
+    color: @color;
+    text-decoration: none;
+  }
+
+  :visited {
+    color: @color;
+    text-decoration: none;
+  }
+
+  :hover {
+    color: @color;
+    text-decoration: none;
+  }
+}
