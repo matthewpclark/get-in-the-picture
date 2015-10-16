@@ -1,0 +1,29 @@
+@import "colours";
+@import "mixins/item-summary";
+
+.event-summary {
+  .item-summary(@cream-darker, @red);
+}
+
+@text-margin: 5px;
+.event-date-month-name {
+  margin: @text-margin;
+  color: @red;
+}
+
+.event-date-day-digits {
+  margin: @text-margin;
+  color: @red;
+}
+
+.event-date-year-digits {
+  margin: @text-margin;
+  color: @gray;
+}
+
+.event-date-border {
+  .item-bordered-content-config(@red);
+  @size: 92px;
+  width: @size;
+  height: @size;
+}

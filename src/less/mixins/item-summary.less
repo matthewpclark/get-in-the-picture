@@ -1,0 +1,36 @@
+//@import (reference) "../../../node_modules/bootstrap/less/grid";
+@import "../colours";
+@import "bordered";
+
+.item-summary(@color, @darker-color) {
+
+  .item-body {
+    background-color: @gray-light;
+    padding: 0;
+    height: 300px;
+    border-bottom: 5px solid @gray-light;
+    border-radius: 10px;
+  }
+
+  .item-header {
+    background-color: @color;
+    border-top: 10px solid @darker-color;
+    margin-top: 0;
+    padding: 5px;
+  }
+
+  .item-text {
+    margin: 10px;
+    overflow: hidden;
+  }
+
+  .item-bordered-content{
+    .item-bordered-content-config(@darker-color)
+  }
+
+}
+
+.item-bordered-content-config(@color) {
+  .bordered-curved(@color);
+  background-color: white;
+}
