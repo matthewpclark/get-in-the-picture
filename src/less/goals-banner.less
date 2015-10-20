@@ -1,11 +1,13 @@
 @import "mixins/svg-background";
-@import "colours";
+@import "colors";
 @import (reference) "../../node_modules/bootstrap/less/bootstrap";
+@import "mixins/disable-a-formating";
 
 .goals-banner {
   .jumbotron;
   text-align: center;
   border-top: 1px solid @green-dark;
+  margin-bottom: 0;
 
   //text
   .text-civ-reg {
@@ -37,7 +39,7 @@
 
 .goals-text(@color) {
   color: @color;
-
+  .disable-a-formating(@color);
 }
 
 .goal-graphic(@graphic_main, @graphic_size, @graphic_alt: '') {
@@ -46,4 +48,5 @@
   background-size: contain;
   background-position: center center;
   height: @graphic_size;
+  .disable-a-formating(black);
 }

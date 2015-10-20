@@ -1,0 +1,27 @@
+@import "mixins/svg-background";
+@import "colors";
+@import (reference) "../../node_modules/bootstrap/less/bootstrap";
+
+.contacts-banner {
+  .jumbotron;
+  .svg-background('../assets/img/bg-texture-hexagons-lg-greyscale.svg', '../assets/img/bg-texture-hexagons-lg-greyscale.svg');
+  background-size: 60%;
+  background-position: center center;
+  height: 110%;
+  background-color: @gray-light;
+
+  margin-bottom: 0;
+
+  .crvs-stamp {
+    .contact-graphic('../assets/img/bg-texture-stamp-lg.png', 300px)
+  }
+}
+
+.contact-graphic(@graphic_main, @graphic_size, @graphic_alt: '') {
+  .svg-background(@graphic_main, @graphic_alt);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: @graphic_size;
+  .disable-a-formating(black);
+}
