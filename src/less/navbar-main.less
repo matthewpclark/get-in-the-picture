@@ -1,22 +1,24 @@
-
+@import "mixins/disable-a-formating";
 @import "colors";
 @import (reference) "../../node_modules/bootstrap/less/bootstrap";
 
 .navbar-main {
-  .navbar;
   .navbar-default;
-  background-color: @gray;
+  // background-color: @gray;
+  border-bottom: 5px solid @green-dark;
+
+  .navbar-list {
+    // background-color: @gray;
+  }
 }
 
-.navbar-list {
-  .nav;
-  .navbar-nav;
-  .nav-tabs;
-  .nav-justified;
-  background-color: @gray;
-}
+.navbar-option {
+  // background-color: @gray;
+  // color: white;
 
-// .navbar-option {
-//   background-color: @gray;
-//   color: white;
-// }
+  .disable-a-formating(white);
+
+  .active {
+    background-color: @gray-light;
+  }
+}
