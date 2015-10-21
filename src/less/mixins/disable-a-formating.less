@@ -1,4 +1,4 @@
-.disable-a-formating(@color) {
+.disable-a-formating(@color, @hover-text-decoration: none) {
   //overide behaviour inherited from a objects
   color: @color;
   text-decoration: none;
@@ -15,6 +15,6 @@
 
   :hover {
     color: @color;
-    text-decoration: none;
+    text-decoration: @hover-text-decoration;
   }
 }

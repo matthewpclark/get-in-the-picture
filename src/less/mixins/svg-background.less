@@ -1,5 +1,11 @@
 
-.svg-background(@svg-url, @fallback-url) {
+.svg-background(@svg-url, @fallback-url: '') {
   background-image: url(@fallback-url);
   background-image: url(@svg-url);
+}
+
+.svg-size(@size) {
+  height: @size;
+  background-size: @size @size;
+  background-position: center center;
 }

@@ -1,5 +1,7 @@
 @import "mixins/svg-background";
+@import "mixins/disable-a-formating";
 @import "colors";
+@import "glyphs";
 @import (reference) "../../node_modules/bootstrap/less/bootstrap";
 
 .contacts-banner {
@@ -15,6 +17,7 @@
   .crvs-stamp {
     .contact-graphic('../assets/img/bg-texture-stamp-lg.png', 300px)
   }
+
 }
 
 .contact-graphic(@graphic_main, @graphic_size, @graphic_alt: '') {
@@ -23,5 +26,13 @@
   background-size: contain;
   background-position: center center;
   height: @graphic_size;
-  .disable-a-formating(black);
+}
+
+.contacts-float-up {
+  .container-fluid;
+  height: 150px;
+}
+
+.contacts-float-down {
+  .container-fluid;
 }
