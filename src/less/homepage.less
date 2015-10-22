@@ -13,10 +13,12 @@
 
 @carousel-size: 600px;
 .homepage-carousel {
-  .jcarousel(100%, @carousel-size);
+  .jcarousel(90%, @carousel-size);
+  overflow: hidden;
 }
 
 .homepage-carousel-container {
   .hexagon-background-colored(@carousel-size, 0.6, @gray-lightest);
   box-shadow: 2px 2px 1px @gray;
+  height: @carousel-size;
 }

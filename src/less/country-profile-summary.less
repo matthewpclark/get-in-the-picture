@@ -14,8 +14,28 @@
 
     .hexagon-grid(@stat-hexagon-size);
 
-    .hexagon-dark-blue {
+    .hexagon-total-pop {
       .hexagon(@stat-hexagon-size, @blue-darkest);
+    }
+
+    .hexagon-pop-growth {
+      .hexagon(@stat-hexagon-size, @green-dark);
+    }
+
+    .hexagon-crude-birth-rate {
+      .hexagon(@stat-hexagon-size, @orange-dark);
+    }
+
+    .hexagon-teen-fertility-rate {
+      .hexagon(@stat-hexagon-size, @blue-darker);
+    }
+
+    .hexagon-total-fertility-rate {
+      .hexagon(@stat-hexagon-size, @red);
+    }
+
+    .hexegon-crude-death-rate {
+      .hexagon(@stat-hexagon-size, @gray);
     }
   }
 }
