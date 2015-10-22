@@ -3,12 +3,23 @@
 @import (reference) "../../node_modules/bootstrap/less/bootstrap";
 
 .navbar-search {
-  .navbar;
   .navbar-default;
   .navbar-fixed-top;
   background: transperent;
   background-color: transparent;
   border: 0;
+
+  .in {
+    border: 0;
+  }
+
+  .navbar-form {
+      border: 0;
+
+      .form-control {
+        background-color: inherit;
+      }
+  }
 }
 
 .nav-bar-min {
