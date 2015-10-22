@@ -1,7 +1,10 @@
+@short-edge: 3.466666666666667;
+@long-edge:  1.575757575757576;
+@pi:          3.14159265359;
 
 .hexagon(@size, @color: inherit) {
-  @hex-lg-ratio: @size / 1.575757575757576;
-  @hex-sm-ratio: @size / 3.466666666666667;
+  @hex-lg-ratio: @size / @long-edge;
+  @hex-sm-ratio: @size / @short-edge;
 
   .hexagon {
   	width: @hex-lg-ratio;//66px;
@@ -42,5 +45,21 @@
     padding: @hex-sm-ratio / 2; //0 0px 1px 0px;
     // font-weight:bold;
     // letter-spacing:2px;
+  }
+}
+
+// provide a honeycomb style layout for our hexagons
+.hexagon-grid(@size, @gap: 5px, @columns: 3, @elements: 16) when (@elements >= 0) {
+  //loop on myself recursivly:
+  .hexagon-grid(@size, @gap, @columns, @elements - 1);
+
+  .hexagon-@{elements} {
+    @mod-columns: mod(@elements, @columns);
+    @mod-cell:    mod(@mod-columns, 2);           //even or odd cell?
+    @left-indent: (@size - (@size / (@short-edge * 4))) + @gap;
+
+    position: absolute;
+    left: @mod-columns * @left-indent;
+    top: (@size / 2) + (floor(@elements / @columns) * (@size + @gap)) - (floor(@size / 2) * @mod-cell);
   }
 }
