@@ -1,6 +1,7 @@
+@import "colors";
 
 @import 'mixins/carousel';
-@import "mixins/svg-background";
+@import "mixins/hexagon-background";
 
 
 @import "items-summary";
@@ -16,10 +17,6 @@
 }
 
 .homepage-carousel-container {
-  .svg-background('../assets/img/bg-texture-hexagons-lg-pastel.svg', '../assets/img/bg-texture-hexagons-lg-pastel.png');
-  //background-repeat: repeat-x;
-  height: @carousel-size;
-  background-size: @carousel-size * 0.6;
-  background-position: center;
-  overflow: hidden;
+  .hexagon-background-colored(@carousel-size, 0.6, @gray-lightest);
+  box-shadow: 2px 2px 1px @gray;
 }

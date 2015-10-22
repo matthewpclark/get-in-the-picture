@@ -1,0 +1,11 @@
+@import "colors";
+@import "mixins/stamp-background";
+
+.country-profile-details {
+  .stamp-background(contain, inherit);
+  background-repeat: no-repeat;
+
+  @vertical-padding: 30px;
+  //padding-top: @vertical-padding;
+  padding-bottom: @vertical-padding;
+}

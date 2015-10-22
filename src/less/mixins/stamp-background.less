@@ -1,0 +1,11 @@
+@import "svg-background";
+
+.stamp-background(@size, @bg-color: transperent) {
+  .svg-background('../assets/img/bg-texture-stamp-lg.png', '../assets/img/bg-texture-hexagons-lg-pastel.png');
+  //background-repeat: repeat-x;
+  height: @size;
+  background-size: @size;
+  background-position: center;
+  overflow: hidden;
+  background-color: @bg-color;
+}
