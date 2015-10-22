@@ -1,3 +1,4 @@
+@import "colors";
 @import "news-summary";
 @import "blog-summary";
 @import "publication-summary";
@@ -5,4 +6,16 @@
 
 .load-more-container {
   margin: 15px;
+
+  .load-more-btn {
+    background-color: @gray-light;
+    color: @gray;
+    font-weight: bold;
+
+    &:hover {
+      background-color: @gray-light;
+      color: darken(@gray, 10%);
+      box-shadow: 10px 10px 5px @gray;
+    }
+  }
 }

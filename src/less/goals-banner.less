@@ -1,4 +1,5 @@
 @import "mixins/svg-background";
+@import "fonts";
 @import "colors";
 @import (reference) "../../node_modules/bootstrap/less/bootstrap";
 @import "mixins/disable-a-formating";
@@ -8,6 +9,7 @@
   text-align: center;
   border-top: 1px solid @green-dark;
   margin-bottom: 0;
+  background-color: @green-cream;
 
   //text
   .text-civ-reg {
@@ -35,11 +37,13 @@
   .graphic-vital-stats {
     .goal-graphic('../assets/img/icon-goals-vital-statistics.svg', @graphic_size);
   }
+
 }
 
 .goals-text(@color) {
   color: @color;
   .disable-a-formating(@color);
+  font-family: @font-title;
 }
 
 .goal-graphic(@graphic_main, @graphic_size, @graphic_alt: '') {
