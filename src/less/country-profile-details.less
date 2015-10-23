@@ -1,0 +1,30 @@
+@import "colors";
+@import "mixins/stamp-background";
+@import "mixins/hexagon";
+
+.country-profile-details {
+  .stamp-background(contain, inherit);
+  background-repeat: no-repeat;
+
+  @vertical-padding: 30px;
+  //padding-top: @vertical-padding;
+  padding-bottom: @vertical-padding;
+
+  @goal-size: 175px;
+  @row-height: @goal-size + 25px;
+
+  .goal-complete {
+    .hexagon(@goal-size, @green-dark);
+    height: @row-height;
+  }
+
+  .goal-in-progress {
+    .hexagon(@goal-size, @orange-light);
+    height: @row-height;
+  }
+
+  .goal-not-started {
+    .hexagon(@goal-size, @gray);
+    height: @row-height;
+  }
+}

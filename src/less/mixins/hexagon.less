@@ -1,0 +1,65 @@
+@short-edge: 3.466666666666667;
+@long-edge:  1.575757575757576;
+@pi:          3.14159265359;
+
+.hexagon(@size, @color: inherit) {
+  @hex-lg-ratio: @size / @long-edge;
+  @hex-sm-ratio: @size / @short-edge;
+
+  .hexagon {
+  	width: @hex-lg-ratio;//66px;
+  	height: @size;//104px;
+  	background: @color;
+  	position: relative;
+    //z-index:-1;
+    margin:0 auto;
+  }
+  .hexagon:before {
+  	content: "";
+  	left: @hex-lg-ratio - (@hex-lg-ratio * 2);//-66px;
+  	display:block;
+    position: relative;
+  border-right: @hex-sm-ratio solid @color; //30px solid @color;
+  border-top: (@size / 2) solid transparent; //52px solid transparent;
+  border-bottom: (@size / 2) solid transparent; //52px solid transparent;
+  }
+  .hexagon:after {
+  	content: "";
+    right: @hex-lg-ratio - (@hex-lg-ratio * 2);//-66px;
+    top: @size - (@size * 2);//-104px;
+    position: relative;
+    display:block;
+  border-left: @hex-sm-ratio solid @color; //30px solid @color;
+  border-top: (@size / 2) solid transparent; //52px solid transparent;
+  border-bottom: (@size / 2) solid transparent; //52px solid transparent;
+  }
+  .hexagon-overlay {
+    z-index:5;
+    position:relative;
+    margin:0 auto;
+    width: @size;
+    top: (@size - (@size * 2) - 4);//-100px;
+    text-align:center;
+    // color:#fdfdfd;
+    // font-size:69px;
+    padding: @hex-sm-ratio / 2; //0 0px 1px 0px;
+    // font-weight:bold;
+    // letter-spacing:2px;
+  }
+}
+
+// provide a honeycomb style layout for our hexagons
+.hexagon-grid(@size, @gap: 5px, @columns: 3, @elements: 16) when (@elements >= 0) {
+  //loop on myself recursivly:
+  .hexagon-grid(@size, @gap, @columns, @elements - 1);
+
+  .hexagon-@{elements} {
+    @mod-columns: mod(@elements, @columns);
+    @mod-cell:    mod(@mod-columns, 2);           //even or odd cell?
+    @left-indent: (@size - (@size / (@short-edge * 4))) + @gap;
+
+    position: absolute;
+    left: @mod-columns * @left-indent;
+    top: ((@size / 2) + (floor(@elements / @columns) * (@size + @gap)) - (floor(@size / 2) * @mod-cell)) + @gap;
+  }
+}

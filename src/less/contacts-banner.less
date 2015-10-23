@@ -1,4 +1,4 @@
-@import "mixins/svg-background";
+@import "mixins/hexagon-background";
 @import "mixins/disable-a-formating";
 @import "colors";
 @import "glyphs";
@@ -6,11 +6,7 @@
 
 .contacts-banner {
   .jumbotron;
-  .svg-background('../assets/img/bg-texture-hexagons-lg-greyscale.svg', '../assets/img/bg-texture-hexagons-lg-greyscale.svg');
-  background-size: 60%;
-  background-position: center center;
-  height: 110%;
-  background-color: @gray-light;
+  .hexagon-background-bw(110%, 0.6, @gray-light);
 
   margin-bottom: 0;
 

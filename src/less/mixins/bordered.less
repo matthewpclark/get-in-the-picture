@@ -1,12 +1,12 @@
 
 .bordered-curved(@color) {
   .bordered(@color);
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
-.bordered(@color) {
+.bordered(@color, @padding: 5px) {
   border: 3px solid @color;
-  align-items: center center;
+  align-items: center;
   text-align: center;
-  padding: 5px;
+  padding: @padding;
 }

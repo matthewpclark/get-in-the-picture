@@ -1,4 +1,5 @@
 @import "colors";
+@import "fonts";
 @import "mixins/item-summary";
 @import "mixins/disable-a-formating";
 
@@ -6,25 +7,33 @@
   .item-summary(@cream-darker, @red);
 }
 
-@text-margin: 5px;
+@text-margin: 0px;
 .event-date-month-name {
   margin: @text-margin;
   .disable-a-formating(@red);
+  font-family: @font-primary;
+  font-weight: bold;
 }
 
 .event-date-day-digits {
   margin: @text-margin;
   .disable-a-formating(@red);
+  font-family: @font-primary;
+  font-weight: bold;
+  font-size: @font-size-xxxlarge;
 }
 
 .event-date-year-digits {
   margin: @text-margin;
   .disable-a-formating(@gray);
+  font-family: @font-primary;
+  //font-size: @font-size-small;
 }
 
 .event-date-border {
   .item-bordered-content-config(@red);
-  @size: 92px;
+  @size: 98px;
   width: @size;
   height: @size;
+  text-align: center top;
 }

@@ -1,0 +1,21 @@
+@import "svg-background";
+
+.hexagon-background-colored(@size, @offset: 1, @bg-color: transperent) {
+  .svg-background('../assets/img/bg-texture-hexagons-lg-pastel.svg', '../assets/img/bg-texture-hexagons-lg-pastel.png');
+  //background-repeat: repeat-x;
+  height: @size;
+  background-size: @size * @offset;
+  background-position: center;
+  overflow: hidden;
+  background-color: @bg-color;
+}
+
+.hexagon-background-bw(@size, @offset: 1, @bg-color: transperent) {
+  .svg-background('../assets/img/bg-texture-hexagons-lg-greyscale.svg', '../assets/img/bg-texture-hexagons-lg-greyscale.svg');
+  //background-repeat: repeat-x;
+  height: @size;
+  background-size: @size * @offset;
+  background-position: center;
+  overflow: hidden;
+  background-color: @bg-color;
+}

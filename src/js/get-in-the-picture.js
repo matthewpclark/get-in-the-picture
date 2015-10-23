@@ -1,21 +1,30 @@
 
 
-//jcarousel configuration
-(function($) {
-    $(function() {
-        $('.homepage-carousel').jcarousel({
-          lists: '.jcarousel-list',
-          items: '.jcarousel-item',
-          wrap: "circular",
-        });
+// $( document ).ready(function() {
+//     console.log( "ready!" );
+// });
 
-        $('.jcarousel-pagination')
-            .on('jcarouselpagination:active', 'a', function() {
-                $(this).addClass('active');
-            })
-            .on('jcarouselpagination:inactive', 'a', function() {
-                $(this).removeClass('active');
-            })
-            .jcarouselPagination();
-    });
+//news summary responsive borders and backgroud
+(function($, viewport){
+  //var bootstrapSmallBreakpoint    = 768;
+  var bootstrapMediumBreakpoint   = 992;
+  var headerPictureClass          = ".header-picture";
+  var respnsiveHeaderPictureClass = 'header-picture-sm';
+
+  function responsiveStyling() {
+    if( $(window).width() >= bootstrapMediumBreakpoint ) {
+        //remove it for larger layouts
+        $(headerPictureClass).removeClass(respnsiveHeaderPictureClass);
+    }
+
+    if( $(window).width() < bootstrapMediumBreakpoint ) {
+        //add our class for smaller layouts
+        $(headerPictureClass).addClass(respnsiveHeaderPictureClass);
+    }
+  }
+
+  $(document).ready(responsiveStyling);
+
+  $(window).resize(responsiveStyling);
+
 })(jQuery);
