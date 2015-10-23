@@ -1,5 +1,6 @@
 @import "mixins/disable-a-formating";
 @import "colors";
+@import "fonts";
 @import (reference) "../../node_modules/bootstrap/less/bootstrap";
 
 .navbar-main {
@@ -18,9 +19,11 @@
   // color: white;
 
   .disable-a-formating(white);
+  font-family: @font-title;
+  font-size:   @font-size-medium;
 
-  .active {
-    background-color: @gray-light;
-  }
+  // .active {
+  //   background-color: @gray-light;
+  // }
 
 }

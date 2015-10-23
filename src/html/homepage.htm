@@ -78,7 +78,7 @@
 
     <!-- Navbar main -->
     <nav class="navbar navbar-main">
-      <div class="container-fluid">
+      <div class="container">
 
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false" aria-controls="navbar">
@@ -92,22 +92,22 @@
         <div id="navbar-main" class="navbar-collapse collapse">
           <ul class="nav nav-justified navbar-list">
             <li class="navbar-option active"> <!-- make sure active drops a blue backgroud -->
-              <a href="homepage.htm"><h2 class="title">Home</h2></a>
+              <a href="homepage.htm">Home</a>
             </li>
             <li class="navbar-option">
-              <a href="crvs-decade.htm"><h2 class="title">CRVS Decade</h2></a>
+              <a href="crvs-decade.htm">CRVS Decade</a>
             </li>
             <li class="navbar-option">
-              <a href="regional-steering-group.htm"><h2 class="title">Regional Steering Group</h2></a>
+              <a href="regional-steering-group.htm">Regional Steering Group</a>
             </li>
             <li class="navbar-option">
-              <a href="country-profiles.htm"><h2 class="title">Country Profiles</h2></a>
+              <a href="country-profiles.htm">Country Profiles</a>
             </li>
             <li class="navbar-option">
-              <a href="news-and-events.htm"><h2 class="title">News &amp; Events</h2></a>
+              <a href="news-and-events.htm">News &amp; Events</a>
             </li>
             <li class="navbar-option">
-              <a href="resources.htm"><h2 class="title">Resources</h2></a>
+              <a href="resources.htm">Resources</a>
             </li>
           </ul>
         </div><!--/.navbar-collapse -->
@@ -118,58 +118,103 @@
     <!-- Our very own carousel! -->
     <div class="container">
       <div class="homepage-carousel-container">
-        <div class="homepage-carousel">
+        <div class="container-fluid">
+          <br>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active homepage-carousel-buttons"></li>
+              <li data-target="#myCarousel" data-slide-to="1" class="homepage-carousel-buttons"></li>
+              <li data-target="#myCarousel" data-slide-to="2" class="homepage-carousel-buttons"></li>
+              <li data-target="#myCarousel" data-slide-to="3" class="homepage-carousel-buttons"></li>
+            </ol>
 
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="jcarousel-list">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <div class="container-fluid">
+                  <div class="row">
 
-                <li class="jcarousel-item">
-                  <div class="lh-column">
-                    Picture
+                    <div class="col-md-6">
+                      <img class="carousel-picture" src="http://placekitten.com/440/390" alt="Photo" width="440" height="390">
+                    </div>
+
+                    <div class="col-md-6">
+                      <h2>A title for this picture</h2>
+                      <p>
+                        Some text about the cats in this picture
+                      </p>
+                      <a href="#" class="btn btn-primary learn-more-btn">Learn More</a>
+                    </div>
+
                   </div>
+                </div>
+              </div>
 
-                  <div class="rh-column">
-                    text
+              <div class="item">
+                <div class="container-fluid">
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <img class="carousel-picture" src="http://placekitten.com/440/390" alt="Photo" width="440" height="390">
+                    </div>
+
+                    <div class="col-md-6">
+                      <h2>A title for this picture</h2>
+                      <p>
+                        Some text about the cats in this picture
+                      </p>
+                      <a href="#" class="btn btn-primary learn-more-btn">Learn More</a>
+                    </div>
+
                   </div>
-                </li>
-
-              <li class="jcarousel-item">
-                <div class="lh-column">
-                  Another Picture
                 </div>
+              </div>
 
-                <div class="rh-column">
-                  More text
+              <div class="item">
+                <div class="container-fluid">
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <img class="carousel-picture" src="http://placekitten.com/440/390" alt="Photo" width="440" height="390">
+                    </div>
+
+                    <div class="col-md-6">
+                      <h2>A title for this picture</h2>
+                      <p>
+                        Some text about the cats in this picture
+                      </p>
+                      <a href="#" class="btn btn-primary learn-more-btn">Learn More</a>
+                    </div>
+
+                  </div>
                 </div>
-              </li>
+              </div>
 
-            </ul>
+              <div class="item">
+                <div class="container-fluid">
+                  <div class="row">
 
-            <ul class="jcarousel-list">
+                    <div class="col-md-6">
+                      <img class="carousel-picture" src="http://placekitten.com/440/390" alt="Photo" width="440" height="390">
+                    </div>
 
-              <li class="jcarousel-item">
-                text
-              </li>
+                    <div class="col-md-6">
+                      <h2>A title for this picture</h2>
+                      <p>
+                        Some text about the cats in this picture
+                      </p>
+                      <a href="#" class="btn btn-primary learn-more-btn">Learn More</a>
+                    </div>
 
-            <li class="jcarousel-item">
-                Some other text
-            </li>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          </ul>
+
         </div>
       </div>
-
-      <div class="row">
-
-        <div class="col-lg-12">
-          <p class="jcarousel-pagination">
-
-          </p>
-        </div>
-
-      </div>
-    </div>
   </div>
 </div>
 
@@ -179,102 +224,109 @@
     <div class="row">
 
       <!-- example news item -->
-        <div class="news-summary col-lg-3">
+      <div class="news-summary col-lg-3 col-md-4 col-sm-6">
+        <div class="wrapper">
           <a href="#">
+            <h3 class="item-header">news</h3>
+            <div class="header-picture">
+              <img class="headline-image" src="http://placekitten.com/300/220">
+            </div>
+
             <div class="item-body nav">
-              <h3 class="item-header">news</h3>
-              <p>
-                Image goes here
-              </p>
               <div class="item-text">
                 <b>Title of a news article</b>
               </div>
             </div>
           </a>
         </div>
+      </div>
 
-      <div class="blog-summary col-lg-3">
-        <a href="#">
-          <div class="item-body">
+      <div class="blog-summary col-lg-3 col-md-4 col-sm-6">
+        <div class="wrapper">
+          <a href="#">
             <h3 class="item-header">blog article</h3>
-            <div class="item-text">
+            <div class="item-body">
+              <div class="item-text">
 
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <p class="item-bordered-content">
-                      Image goes here
-                    </p>
-                    <b>Authors Name</b>
-                  </div>
-                  <div class="col-xs-6">
-                    <b>Title of a blog article</b>
-                    <p>
-                      blog text goes here!
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="publication-summary col-lg-3">
-        <a href="#">
-          <div class="item-body">
-            <h3 class="item-header">publication</h3>
-            <div class="item-text">
-
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <b>Title of publication</b>
-                    <p>
-                      blog text goes here!
-                    </p>
-                  </div>
-                  <div class="col-xs-6">
-                    <p>
-                      Image goes here
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="event-summary col-lg-3">
-        <a href="#">
-          <div class="item-body">
-            <h3 class="item-header">event</h3>
-            <div class="item-text">
-
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <div class="event-date-border">
-                      <h5 class="event-date-month-name">month</h5>
-                      <h2 class="event-date-day-digits"><b>20</b></h2>
-                      <h5 class="event-date-year-digits">2015</h5>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <div>
+                        <img class="blog-photo" src="http://placekitten.com/90/110">
+                      </div>
+                      <b>Authors Name</b>
+                    </div>
+                    <div class="col-xs-6">
+                      <b>Title of a blog article</b>
+                      <p>
+                        blog text goes here!
+                      </p>
                     </div>
                   </div>
-                  <div class="col-xs-6">
-                    <b>Title of the event</b>
-                    <p>
-                      Title descrtption goes here!
-                    </p>
+                </div>
+
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="publication-summary col-lg-3 col-md-4 col-sm-6">
+        <div class="wrapper">
+          <a href="#">
+            <h3 class="item-header">publication</h3>
+            <div class="item-body">
+              <div class="item-text">
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <b>Title of publication</b>
+                      <p>
+                        blog text goes here!
+                      </p>
+                    </div>
+                    <div class="col-xs-6">
+                        <img src="http://placekitten.com/90/150">
+                    </div>
                   </div>
                 </div>
-              </div>
 
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+      </div>
+
+      <div class="event-summary col-lg-3 col-md-4 col-sm-6">
+        <div class="wrapper">
+          <a href="#">
+            <h3 class="item-header">event</h3>
+            <div class="item-body">
+              <div class="item-text">
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <div class="event-date-border">
+                        <div class="event-date-month-name">month</div>
+                        <div class="event-date-day-digits">20</div>
+                        <div class="event-date-year-digits">2015</div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6">
+                      <b>Title of the event</b>
+                      <p>
+                        Title descrtption goes here!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
 
     </div>
@@ -289,7 +341,7 @@
 
   <!-- Goals banner -->
   <div class="goals-banner">
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="row">
 
@@ -353,7 +405,7 @@ Cras dapibus fringilla sem id interdum. Integer tristique aliquet justo vel temp
 
   <!-- Contacts banner -->
   <div class="contacts-banner">
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="row">
 
@@ -396,7 +448,7 @@ Cras dapibus fringilla sem id interdum. Integer tristique aliquet justo vel temp
 
             <div class="row">
 
-              <div class="col-xs-4">
+              <div class="col-sm-4">
                 <a href="#">
                   <div class="icon-twitter">
                     <!-- Filled in by css -->
@@ -404,7 +456,7 @@ Cras dapibus fringilla sem id interdum. Integer tristique aliquet justo vel temp
                 </a>
               </div>
 
-              <div class="col-xs-4">
+              <div class="col-sm-4">
                 <a href="#">
                   <div class="icon-facebook">
                     <!-- Filled in by css -->
@@ -412,7 +464,7 @@ Cras dapibus fringilla sem id interdum. Integer tristique aliquet justo vel temp
                 </a>
               </div>
 
-              <div class="col-xs-4">
+              <div class="col-sm-4">
                 <a href="#">
                   <div class="icon-youtube">
                     <!-- Filled in by css -->
@@ -492,7 +544,7 @@ Cras dapibus fringilla sem id interdum. Integer tristique aliquet justo vel temp
 
   <!-- footer-login banner -->
   <div class="footer-login-banner">
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="row">
 

@@ -60,6 +60,6 @@
 
     position: absolute;
     left: @mod-columns * @left-indent;
-    top: (@size / 2) + (floor(@elements / @columns) * (@size + @gap)) - (floor(@size / 2) * @mod-cell);
+    top: ((@size / 2) + (floor(@elements / @columns) * (@size + @gap)) - (floor(@size / 2) * @mod-cell)) + @gap;
   }
 }

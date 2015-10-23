@@ -2,6 +2,7 @@
 
 @import 'mixins/carousel';
 @import "mixins/hexagon-background";
+@import "mixins/bordered";
 
 
 @import "items-summary";
@@ -11,14 +12,49 @@
 @import "footer-login-banner";
 //@import (reference) "../../node_modules/bootstrap/less/bootstrap";
 
-@carousel-size: 600px;
+@carousel-size: 450px;
 .homepage-carousel {
   .jcarousel(90%, @carousel-size);
   overflow: hidden;
 }
 
 .homepage-carousel-container {
-  .hexagon-background-colored(@carousel-size, 0.6, @gray-lightest);
+  .hexagon-background-colored(100%, 0.6, @gray-lightest);
   box-shadow: 2px 2px 1px @gray;
-  height: @carousel-size;
+  //height: @carousel-size;
+  padding-bottom: 15px;
+
+  .carousel-picture {
+    .bordered(@blue-lightest, 0);
+  }
+
+  .learn-more-btn {
+    background-color: @blue-lighter;
+    font-family: @font-title;
+    //font-weight: bold;
+    border: 2px solid @gray;
+
+    &:hover {
+      background-color: @blue-darker;
+      border: 2px solid @gray-light;
+    }
+  }
+
+  .carousel-indicators {
+    align-items: flex-start;
+    text-align: right;
+    .homepage-carousel-buttons {
+        border: 3px solid @gray;
+
+
+        &:hover {
+          background-color: @gray-light;
+        }
+    }
+
+    .active {
+      background-color: @orange-dark;
+      border: 3px solid @red;
+    }
+  }
 }
