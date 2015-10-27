@@ -5,3 +5,59 @@
 
 @import "country-profile-summary";
 @import "country-profile-details";
+
+.targets-table {
+  width: 100%;
+
+  .targets-header {
+    font-size: @font-size-xxlarge;
+    .table-row-config();
+  }
+
+  .targets-row {
+    font-size: @font-size-medium;
+    font-family: @font-title;
+    color: @gray-darker;
+    .table-row-config();
+  }
+
+  .empty-cell {
+    height: 100%;
+    .table-row-config();
+  }
+
+  .targets-table-goal1 {
+    .table-column-config(@green-cream);
+  }
+
+  .targets-table-goal2 {
+    .table-column-config(@red-cream);
+  }
+
+  .targets-table-goal3 {
+    .table-column-config(@blue-cream);
+  }
+
+  .column1 {
+    .table-column-config(@green-cream);
+  }
+
+  .column2 {
+    .table-column-config(@red-cream);
+  }
+
+  .column3 {
+    .table-column-config(@blue-cream);
+  }
+}
+
+.table-column-config(@color) {
+  background-color: @color;
+
+}
+
+.table-row-config() {
+  td, th {
+    padding: 15px;
+  }
+}
