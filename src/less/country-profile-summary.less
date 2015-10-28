@@ -9,33 +9,60 @@
   padding-bottom: @vertical-padding;
 
   .stats-honeycomb {
-    @stat-hexagon-size: 200px;
+    @stat-hexagon-size: 180px;
     height: @stat-hexagon-size * 3;
 
     .hexagon-grid(@stat-hexagon-size);
 
     .hexagon-total-pop {
       .hexagon(@stat-hexagon-size, @blue-darkest);
+      .hex-text-config(@orange-light);
     }
 
     .hexagon-pop-growth {
       .hexagon(@stat-hexagon-size, @green-dark);
+      .hex-text-config(@red);
     }
 
     .hexagon-crude-birth-rate {
-      .hexagon(@stat-hexagon-size, @orange-dark);
+      .hexagon(@stat-hexagon-size, @orange-light);
+      .hex-text-config(@blue-darkest);
     }
 
     .hexagon-teen-fertility-rate {
       .hexagon(@stat-hexagon-size, @blue-darker);
+      .hex-text-config(@green-dark);
     }
 
     .hexagon-total-fertility-rate {
       .hexagon(@stat-hexagon-size, @red);
+      .hex-text-config(white);
     }
 
     .hexegon-crude-death-rate {
       .hexagon(@stat-hexagon-size, @gray);
+      .hex-text-config(black);
     }
+  }
+}
+
+.hex-text-config(@color-primary, @color-secondary: white) {
+  font-family: @font-subheading;
+
+  .stat-main {
+    font-size: @font-size-massive;
+    color: @color-primary;
+    font-weight: bold;
+  }
+
+  .stat-secondary {
+    font-size: @font-size-large;
+    color: @color-primary;
+  }
+
+  .stat-desc {
+    font-size: @font-size-medium;
+    color: @color-secondary;
+    padding-top: 20px;
   }
 }
