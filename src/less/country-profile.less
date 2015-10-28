@@ -5,6 +5,7 @@
 
 @import "country-profile-summary";
 @import "country-profile-details";
+@import "mixins/hexagon";
 
 .targets-table {
   width: 100%;
@@ -26,17 +27,17 @@
     .table-row-config();
   }
 
-  .targets-table-goal1 {
-    .table-column-config(@green-cream);
-  }
-
-  .targets-table-goal2 {
-    .table-column-config(@red-cream);
-  }
-
-  .targets-table-goal3 {
-    .table-column-config(@blue-cream);
-  }
+  // .targets-table-goal1 {
+  //   .table-column-config(@green-cream);
+  // }
+  //
+  // .targets-table-goal2 {
+  //   .table-column-config(@red-cream);
+  // }
+  //
+  // .targets-table-goal3 {
+  //   .table-column-config(@blue-cream);
+  // }
 
   .column1 {
     .table-column-config(@green-cream);
@@ -49,6 +50,18 @@
   .column3 {
     .table-column-config(@blue-cream);
   }
+
+  .hex-icon-green {
+    .table-hexagon-config(@green-dark);
+  }
+
+  .hex-icon-red {
+    .table-hexagon-config(@red);
+  }
+
+  .hex-icon-blue {
+    .table-hexagon-config(@blue-darker);
+  }
 }
 
 .table-column-config(@color) {
@@ -59,5 +72,16 @@
 .table-row-config() {
   td, th {
     padding: 15px;
+  }
+}
+
+.table-hexagon-config(@color) {
+  .hexagon(15px, @color);
+  border: 0;
+  background-color: transparent;
+  overflow: visible;
+
+  &:focus {
+    outline: 0;
   }
 }

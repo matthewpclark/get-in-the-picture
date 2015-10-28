@@ -28,3 +28,8 @@
   $(window).resize(responsiveStyling);
 
 })(jQuery);
+
+//enable popover functionality
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
