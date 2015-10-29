@@ -1,0 +1,56 @@
+@import "mixins/hexagon-background.less";
+@import "colors";
+@import "fonts";
+
+.resource-details {
+
+  .hexagon-background-colored(100%);
+
+  .details-row {
+    font-size: @font-size-medium;
+    margin-bottom: 20px;
+  }
+
+  .resource-links {
+    font-size: @font-size-medium;
+    font-family: @font-title;
+    color: @blue-darker;
+  }
+
+  .resource-tags {
+    font-size: @font-size-xlarge;
+    font-family: @font-title;
+    color: @blue-darker;
+    margin-top: 30px;
+
+    .tag-links {
+
+    }
+  }
+}
+
+.resources {
+  border-top: 2px solid @gray;
+
+  @margin: 15px;
+  margin-bottom: @margin;
+
+  .resources-row {
+    border-bottom: 2px solid @blue-darker;
+    margin-top: @margin;
+    margin-bottom: @margin;
+
+    .language-options {
+      text-align: right;
+
+      .language {
+        color: @blue-darker;
+        font-size: @font-size-base;
+      }
+    }
+
+    .document-name {
+      font-size: @font-size-large;
+    }
+  }
+}
