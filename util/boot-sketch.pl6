@@ -33,7 +33,7 @@ sub MAIN (*@elements) {
 
       when 'container' {
         say "container";
-        my $container = Tag.new( :tag<div>, :classes<container> );
+        my $container = Tag.new( :tag<div>, :classes("container{ @container-stack ?? '-fluid' !! '' }"));
         if my $parent-container = @tag-stack.reverse.first: *.classes.first(/col/)  {
           $parent-container.push: $container;
         }
@@ -47,7 +47,7 @@ sub MAIN (*@elements) {
       when 'row' {
         say "row";
         my $row = Tag.new( :tag<div>, :classes<row> );
-        if my $parent-container = @tag-stack.reverse.first: *.classes.first('container') {
+        if my $parent-container = @tag-stack.reverse.first: *.classes.first(/container/) {
           $parent-container.push: $row;
         }
         else {
@@ -57,7 +57,7 @@ sub MAIN (*@elements) {
       }
 
       when m/col/ {
-        my $class = "col-{ $_.comb( /\d+/ ).join('') }";
+        my $class = "col-md-{ $_.comb( /\d+/ ).join('') }";
         say $class;
         my $col = Tag.new( :tag<div>, :classes($class) );
         if my $parent-row = @tag-stack.reverse.first: *.classes.first('row') {
